@@ -1,0 +1,10 @@
+C:\Users\rlagy\source\repos\WinformTable\bin\Debug\WinformTable.exe.config
+C:\Users\rlagy\source\repos\WinformTable\bin\Debug\WinformTable.exe
+C:\Users\rlagy\source\repos\WinformTable\bin\Debug\WinformTable.pdb
+C:\Users\rlagy\source\repos\WinformTable\obj\Debug\WinformTable.csprojAssemblyReference.cache
+C:\Users\rlagy\source\repos\WinformTable\obj\Debug\WinformTable.Form1.resources
+C:\Users\rlagy\source\repos\WinformTable\obj\Debug\WinformTable.Properties.Resources.resources
+C:\Users\rlagy\source\repos\WinformTable\obj\Debug\WinformTable.csproj.GenerateResource.cache
+C:\Users\rlagy\source\repos\WinformTable\obj\Debug\WinformTable.csproj.CoreCompileInputs.cache
+C:\Users\rlagy\source\repos\WinformTable\obj\Debug\WinformTable.exe
+C:\Users\rlagy\source\repos\WinformTable\obj\Debug\WinformTable.pdb
