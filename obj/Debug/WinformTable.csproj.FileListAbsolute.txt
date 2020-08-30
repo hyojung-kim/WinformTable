@@ -8,3 +8,4 @@ C:\Users\rlagy\source\repos\WinformTable\obj\Debug\WinformTable.csproj.GenerateR
 C:\Users\rlagy\source\repos\WinformTable\obj\Debug\WinformTable.csproj.CoreCompileInputs.cache
 C:\Users\rlagy\source\repos\WinformTable\obj\Debug\WinformTable.exe
 C:\Users\rlagy\source\repos\WinformTable\obj\Debug\WinformTable.pdb
+C:\Users\rlagy\source\repos\WinformTable\obj\Debug\WinformTable.AccoutForm.resources

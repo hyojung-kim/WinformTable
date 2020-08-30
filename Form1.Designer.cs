@@ -30,10 +30,10 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.SerachButton = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.newForm = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.idLabel = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
@@ -47,6 +47,8 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
+            this.id_Label = new System.Windows.Forms.Label();
+            this.lineNum = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
@@ -73,16 +75,17 @@
             this.SerachButton.UseVisualStyleBackColor = false;
             this.SerachButton.Click += new System.EventHandler(this.SerachButton_Click);
             // 
-            // button2
+            // newForm
             // 
-            this.button2.BackColor = System.Drawing.Color.DarkBlue;
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(483, 41);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(145, 48);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "신규[F3]";
-            this.button2.UseVisualStyleBackColor = false;
+            this.newForm.BackColor = System.Drawing.Color.DarkBlue;
+            this.newForm.ForeColor = System.Drawing.Color.White;
+            this.newForm.Location = new System.Drawing.Point(483, 41);
+            this.newForm.Name = "newForm";
+            this.newForm.Size = new System.Drawing.Size(145, 48);
+            this.newForm.TabIndex = 2;
+            this.newForm.Text = "신규[F3]";
+            this.newForm.UseVisualStyleBackColor = false;
+            this.newForm.Click += new System.EventHandler(this.newForm_Click);
             // 
             // button3
             // 
@@ -106,16 +109,16 @@
             this.button4.Text = "미리보기[F10]";
             this.button4.UseVisualStyleBackColor = false;
             // 
-            // button5
+            // idLabel
             // 
-            this.button5.BackColor = System.Drawing.Color.DarkBlue;
-            this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(934, 41);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(145, 48);
-            this.button5.TabIndex = 5;
-            this.button5.Text = "인쇄[F11]";
-            this.button5.UseVisualStyleBackColor = false;
+            this.idLabel.BackColor = System.Drawing.Color.DarkBlue;
+            this.idLabel.ForeColor = System.Drawing.Color.White;
+            this.idLabel.Location = new System.Drawing.Point(934, 41);
+            this.idLabel.Name = "idLabel";
+            this.idLabel.Size = new System.Drawing.Size(145, 48);
+            this.idLabel.TabIndex = 5;
+            this.idLabel.Text = "인쇄[F11]";
+            this.idLabel.UseVisualStyleBackColor = false;
             // 
             // button7
             // 
@@ -131,6 +134,7 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dataGridView1.Location = new System.Drawing.Point(66, 383);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
@@ -139,15 +143,18 @@
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(1164, 216);
             this.dataGridView1.TabIndex = 8;
-     
+            this.dataGridView1.SelectionChanged += new System.EventHandler(this.dataGridView1_SelectionChanged);
             // 
             // dataGridView2
             // 
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dataGridView2.Location = new System.Drawing.Point(66, 616);
+            this.dataGridView2.MultiSelect = false;
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowHeadersWidth = 62;
             this.dataGridView2.RowTemplate.Height = 30;
+            this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView2.Size = new System.Drawing.Size(1164, 216);
             this.dataGridView2.TabIndex = 9;
             // 
@@ -234,6 +241,24 @@
             this.textBox4.Size = new System.Drawing.Size(167, 28);
             this.textBox4.TabIndex = 19;
             // 
+            // id_Label
+            // 
+            this.id_Label.AutoSize = true;
+            this.id_Label.Location = new System.Drawing.Point(66, 343);
+            this.id_Label.Name = "id_Label";
+            this.id_Label.Size = new System.Drawing.Size(54, 18);
+            this.id_Label.TabIndex = 20;
+            this.id_Label.Text = "label7";
+            // 
+            // lineNum
+            // 
+            this.lineNum.AutoSize = true;
+            this.lineNum.Location = new System.Drawing.Point(212, 343);
+            this.lineNum.Name = "lineNum";
+            this.lineNum.Size = new System.Drawing.Size(54, 18);
+            this.lineNum.TabIndex = 21;
+            this.lineNum.Text = "label7";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
@@ -241,6 +266,8 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1307, 844);
+            this.Controls.Add(this.lineNum);
+            this.Controls.Add(this.id_Label);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox2);
@@ -254,10 +281,10 @@
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button7);
-            this.Controls.Add(this.button5);
+            this.Controls.Add(this.idLabel);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.newForm);
             this.Controls.Add(this.SerachButton);
             this.Controls.Add(this.label1);
             this.Name = "Form1";
@@ -276,10 +303,10 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button SerachButton;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button newForm;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button idLabel;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridView dataGridView2;
@@ -293,6 +320,8 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.Label id_Label;
+        private System.Windows.Forms.Label lineNum;
     }
 }
 
