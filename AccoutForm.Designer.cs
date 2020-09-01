@@ -30,7 +30,7 @@
         {
             this.listView1 = new System.Windows.Forms.ListView();
             this.Clear = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            this.DELETE = new System.Windows.Forms.Button();
             this.UpIn = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -80,6 +80,9 @@
             this.label23 = new System.Windows.Forms.Label();
             this.listView4 = new System.Windows.Forms.ListView();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -106,16 +109,17 @@
             this.Clear.UseVisualStyleBackColor = false;
             this.Clear.Click += new System.EventHandler(this.Clear_Click);
             // 
-            // button6
+            // DELETE
             // 
-            this.button6.BackColor = System.Drawing.Color.DarkBlue;
-            this.button6.ForeColor = System.Drawing.Color.White;
-            this.button6.Location = new System.Drawing.Point(820, 71);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(103, 40);
-            this.button6.TabIndex = 6;
-            this.button6.Text = "삭제[F6]";
-            this.button6.UseVisualStyleBackColor = false;
+            this.DELETE.BackColor = System.Drawing.Color.DarkBlue;
+            this.DELETE.ForeColor = System.Drawing.Color.White;
+            this.DELETE.Location = new System.Drawing.Point(820, 71);
+            this.DELETE.Name = "DELETE";
+            this.DELETE.Size = new System.Drawing.Size(103, 40);
+            this.DELETE.TabIndex = 6;
+            this.DELETE.Text = "삭제[F6]";
+            this.DELETE.UseVisualStyleBackColor = false;
+            this.DELETE.Click += new System.EventHandler(this.DELETE_Click);
             // 
             // UpIn
             // 
@@ -226,6 +230,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(214, 28);
             this.textBox1.TabIndex = 17;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // textBox2
             // 
@@ -297,6 +302,7 @@
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(214, 28);
             this.textBox6.TabIndex = 26;
+            this.textBox6.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
             // 
             // textBox7
             // 
@@ -304,6 +310,7 @@
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(214, 28);
             this.textBox7.TabIndex = 27;
+            this.textBox7.TextChanged += new System.EventHandler(this.textBox7_TextChanged);
             // 
             // textBox8
             // 
@@ -544,6 +551,39 @@
             this.dataGridView1.Size = new System.Drawing.Size(1118, 161);
             this.dataGridView1.TabIndex = 55;
             // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.ForeColor = System.Drawing.Color.Red;
+            this.label24.Location = new System.Drawing.Point(183, 195);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(49, 18);
+            this.label24.TabIndex = 56;
+            this.label24.Text = "NULL";
+            this.label24.Visible = false;
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.ForeColor = System.Drawing.Color.Red;
+            this.label25.Location = new System.Drawing.Point(555, 195);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(49, 18);
+            this.label25.TabIndex = 57;
+            this.label25.Text = "NULL";
+            this.label25.Visible = false;
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.ForeColor = System.Drawing.Color.Red;
+            this.label26.Location = new System.Drawing.Point(555, 238);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(49, 18);
+            this.label26.TabIndex = 58;
+            this.label26.Text = "NULL";
+            this.label26.Visible = false;
+            // 
             // AccoutForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
@@ -551,6 +591,9 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1236, 960);
+            this.Controls.Add(this.label26);
+            this.Controls.Add(this.label25);
+            this.Controls.Add(this.label24);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label23);
             this.Controls.Add(this.listView4);
@@ -600,7 +643,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button8);
             this.Controls.Add(this.UpIn);
-            this.Controls.Add(this.button6);
+            this.Controls.Add(this.DELETE);
             this.Controls.Add(this.Clear);
             this.Controls.Add(this.listView1);
             this.Name = "AccoutForm";
@@ -615,7 +658,7 @@
         #endregion
         private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.Button Clear;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button DELETE;
         private System.Windows.Forms.Button UpIn;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Label label1;
@@ -665,5 +708,8 @@
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.ListView listView4;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label label26;
     }
 }

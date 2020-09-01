@@ -1,9 +1,11 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -14,14 +16,16 @@ namespace WinformTable
     public partial class Form1 : Form
     {
         DB dB = new DB();
+        string szQuery= "SELECT * FROM Account";
+
         public Form1()
         {
             InitializeComponent();
         }
 
-        public void SelectAccount()
+        public void SelectAccount(string szQuery)
         {
-            string szQuery = "SELECT * FROM Account";
+            
 
             // DataSet을 가져온다
             DataSet ds = dB.GetData(szQuery);
@@ -44,13 +48,20 @@ namespace WinformTable
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            SelectAccount();
+            
+            SelectAccount(szQuery);
             dataGridView2.CurrentCell = dataGridView2.Rows[0].Cells[13];
         }
 
         private void SerachButton_Click(object sender, EventArgs e)
         {
-            SelectAccount();
+            szQuery = "Select * from Account";
+            if(serachBox.TextLength > 0)
+            {
+                szQuery += "WHERE Section =" + SectionBox.Text;
+            }
+            
+            SelectAccount(szQuery);
         }
 
 
@@ -97,6 +108,8 @@ namespace WinformTable
 
         private void newForm_Click(object sender, EventArgs e)
         {
+            ArrayList codeArray = new ArrayList();
+           
             AccoutForm accoutForm = new AccoutForm();
             AccoutForm.AccuntDB form1AccuntDB = new AccoutForm.AccuntDB
             {
@@ -126,9 +139,14 @@ namespace WinformTable
                 Grade = dataGridView2.CurrentRow.Cells[22].Value.ToString(),
                 Area = dataGridView2.CurrentRow.Cells[23].Value.ToString()
             };
+            for(int k = 0; k < dataGridView1.RowCount - 1; k++)
+            {
+                codeArray.Add(dataGridView1.Rows[k].Cells[1].Value.ToString());
+            }
 
+            accoutForm.codeArray = codeArray;
             accoutForm.accuntDB = form1AccuntDB;
-            accoutForm.Show();
+            accoutForm.ShowDialog();
         }
 
    

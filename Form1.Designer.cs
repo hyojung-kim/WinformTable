@@ -41,12 +41,12 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.areaLabel = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.serachBox = new System.Windows.Forms.TextBox();
+            this.SectionBox = new System.Windows.Forms.TextBox();
+            this.usewBox = new System.Windows.Forms.TextBox();
+            this.areaBox = new System.Windows.Forms.TextBox();
             this.id_Label = new System.Windows.Forms.Label();
             this.lineNum = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -65,6 +65,7 @@
             // 
             // SerachButton
             // 
+            this.SerachButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.SerachButton.BackColor = System.Drawing.Color.DarkBlue;
             this.SerachButton.ForeColor = System.Drawing.Color.White;
             this.SerachButton.Location = new System.Drawing.Point(332, 41);
@@ -77,6 +78,7 @@
             // 
             // newForm
             // 
+            this.newForm.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.newForm.BackColor = System.Drawing.Color.DarkBlue;
             this.newForm.ForeColor = System.Drawing.Color.White;
             this.newForm.Location = new System.Drawing.Point(483, 41);
@@ -89,6 +91,7 @@
             // 
             // button3
             // 
+            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button3.BackColor = System.Drawing.Color.DarkBlue;
             this.button3.ForeColor = System.Drawing.Color.White;
             this.button3.Location = new System.Drawing.Point(634, 41);
@@ -100,6 +103,7 @@
             // 
             // button4
             // 
+            this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button4.BackColor = System.Drawing.Color.DarkBlue;
             this.button4.ForeColor = System.Drawing.Color.White;
             this.button4.Location = new System.Drawing.Point(785, 41);
@@ -111,6 +115,7 @@
             // 
             // idLabel
             // 
+            this.idLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.idLabel.BackColor = System.Drawing.Color.DarkBlue;
             this.idLabel.ForeColor = System.Drawing.Color.White;
             this.idLabel.Location = new System.Drawing.Point(934, 41);
@@ -122,6 +127,7 @@
             // 
             // button7
             // 
+            this.button7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button7.BackColor = System.Drawing.Color.DarkBlue;
             this.button7.ForeColor = System.Drawing.Color.White;
             this.button7.Location = new System.Drawing.Point(1085, 42);
@@ -133,6 +139,8 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dataGridView1.Location = new System.Drawing.Point(66, 383);
@@ -147,6 +155,8 @@
             // 
             // dataGridView2
             // 
+            this.dataGridView2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dataGridView2.Location = new System.Drawing.Point(66, 616);
@@ -160,6 +170,8 @@
             // 
             // listView1
             // 
+            this.listView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.listView1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.listView1.HideSelection = false;
             this.listView1.Location = new System.Drawing.Point(66, 144);
@@ -195,14 +207,14 @@
             this.label4.TabIndex = 13;
             this.label4.Text = "거래처 상태";
             // 
-            // label5
+            // areaLabel
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(848, 258);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(80, 18);
-            this.label5.TabIndex = 14;
-            this.label5.Text = "지역구분";
+            this.areaLabel.AutoSize = true;
+            this.areaLabel.Location = new System.Drawing.Point(848, 258);
+            this.areaLabel.Name = "areaLabel";
+            this.areaLabel.Size = new System.Drawing.Size(80, 18);
+            this.areaLabel.TabIndex = 14;
+            this.areaLabel.Text = "지역구분";
             // 
             // label6
             // 
@@ -213,33 +225,33 @@
             this.label6.TabIndex = 15;
             this.label6.Text = "* 부서코드 부서명 단어를 1자 이상 입력하여 검색할 수 있습니다.";
             // 
-            // textBox1
+            // serachBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(237, 186);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(193, 28);
-            this.textBox1.TabIndex = 16;
+            this.serachBox.Location = new System.Drawing.Point(237, 186);
+            this.serachBox.Name = "serachBox";
+            this.serachBox.Size = new System.Drawing.Size(193, 28);
+            this.serachBox.TabIndex = 16;
             // 
-            // textBox2
+            // SectionBox
             // 
-            this.textBox2.Location = new System.Drawing.Point(237, 255);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(193, 28);
-            this.textBox2.TabIndex = 17;
+            this.SectionBox.Location = new System.Drawing.Point(237, 255);
+            this.SectionBox.Name = "SectionBox";
+            this.SectionBox.Size = new System.Drawing.Size(193, 28);
+            this.SectionBox.TabIndex = 17;
             // 
-            // textBox3
+            // usewBox
             // 
-            this.textBox3.Location = new System.Drawing.Point(587, 255);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(189, 28);
-            this.textBox3.TabIndex = 18;
+            this.usewBox.Location = new System.Drawing.Point(587, 255);
+            this.usewBox.Name = "usewBox";
+            this.usewBox.Size = new System.Drawing.Size(189, 28);
+            this.usewBox.TabIndex = 18;
             // 
-            // textBox4
+            // areaBox
             // 
-            this.textBox4.Location = new System.Drawing.Point(945, 255);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(167, 28);
-            this.textBox4.TabIndex = 19;
+            this.areaBox.Location = new System.Drawing.Point(945, 255);
+            this.areaBox.Name = "areaBox";
+            this.areaBox.Size = new System.Drawing.Size(167, 28);
+            this.areaBox.TabIndex = 19;
             // 
             // id_Label
             // 
@@ -265,15 +277,15 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1307, 844);
+            this.ClientSize = new System.Drawing.Size(1296, 844);
             this.Controls.Add(this.lineNum);
             this.Controls.Add(this.id_Label);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.areaBox);
+            this.Controls.Add(this.usewBox);
+            this.Controls.Add(this.SectionBox);
+            this.Controls.Add(this.serachBox);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.areaLabel);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -314,12 +326,12 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label areaLabel;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox serachBox;
+        private System.Windows.Forms.TextBox SectionBox;
+        private System.Windows.Forms.TextBox usewBox;
+        private System.Windows.Forms.TextBox areaBox;
         private System.Windows.Forms.Label id_Label;
         private System.Windows.Forms.Label lineNum;
     }
